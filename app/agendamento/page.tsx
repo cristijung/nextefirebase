@@ -1,6 +1,6 @@
 'use client';
 
-import { use, useState } from 'react';
+import { useState } from 'react';
 import { db } from '@/config/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 

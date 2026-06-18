@@ -13,6 +13,6 @@ const firebaseConfig = {
 
 // no Next.js, a página recarrega muito qdo salvamos o código
 // este código abaixo garante q o Firebase seja inicializado somente 1x
-const app = getApps().lenght > 0 ? getApp() : initializeApp(firebaseConfig);
+const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
