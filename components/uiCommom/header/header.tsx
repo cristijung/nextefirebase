@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,13 +23,23 @@ export default function Header() {
           <div className="shrink-0 flex items-center">
             <Link 
               href="/" 
-              className="text-2xl font-black tracking-tight focus:outline-none focus:ring-2 focus:ring-purple-600 rounded-lg p-1 group"
+              className="text-2xl font-black tracking-tight focus:outline-none focus:ring-2 focus:ring-purple-600 rounded-lg p-1 group flex items-center gap-3"
               aria-label="PurrfectCare Home"
             >
-              <span className="bg-linear-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent group-hover:to-yellow-500 transition-all duration-300">
-                Purrfect
-              </span>
-              <span className="text-slate-800">Care</span>
+              <Image 
+                src="/logo_sw.png" 
+                alt="PurrfectCare Logo" 
+                width={40} 
+                height={40} 
+                className="w-auto h-10 object-contain"
+                priority
+              />
+              <div>
+                <span className="bg-linear-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent group-hover:to-yellow-500 transition-all duration-300">
+                  Purrfect
+                </span>
+                <span className="text-slate-800">Care</span>
+              </div>
             </Link>
           </div>
 
